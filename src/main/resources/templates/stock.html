@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head data-th-replace="base :: page_head(~{::title},~{})">
+  <title>[[ ${ticker} ]]</title>
+</head>
+<body data-th-replace="base :: page_body(~{::main})">
+<main>
+  <h1>Stock: [[ ${ticker} ]]</h1>
+  <ul id="stocks" data-th-each="stock : ${stocks}">
+    <li>Last price: [[ ${stock.price} ]]</li>
+  </ul>
+  <script data-th-inline="javascript">
+    document.addEventListener('DOMContentLoaded', onDOMContentLoaded);
+
+    function onEventSourceMessage(message) {
+      document.querySelector('#stocks').innerHTML = message.data;
+    }
+
+    function onDOMContentLoaded() {
+      const eventSourceURL = [[ @{|/stock/${ticker}/stream|} ]];
+      // var eventSourceURL = '/stock/' + [[ ${ticker} ]] + '/stream';
+      const eventSource = new EventSource(eventSourceURL);
+
+      eventSource.addEventListener('message', onEventSourceMessage);
+    }
+  </script>
+</main>
+</body>
+</html>

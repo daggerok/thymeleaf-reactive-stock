@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head data-th-fragment="page_head(title,styles)">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel=preload as=style
+        href=https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i|Roboto+Slab:700&subset=latin-ext&display=swap/>
+  <link rel=stylesheet
+        href=https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i,900,900i|Roboto+Slab:700&subset=latin-ext&display=swap
+        media=print onload='this.media="all"'/>
+  <link rel="shortcut icon" href="../public/favicon.ico" data-th-href="@{/favicon.ico}" type="image/x-icon">
+  <link rel="stylesheet" href="../public/styles.css" data-th-href="@{/styles.css}">
+  <title data-th-replace="${title}">Index page</title>
+  <style data-th-block="" data-th-replace="${styles}">/* CSS content to be replaced */</style>
+</head>
+<body data-th-fragment="page_body(main)">
+<main data-th-replace="${main}"><!-- HTML content to be replaced --></main>
+<script src="../public/main.js" data-th-src="@{/main.js}"></script>
+</body>
+</html>

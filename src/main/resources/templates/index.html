@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head data-th-replace="base :: page_head(~{::title},~{})">
+  <title>Stock</title>
+</head>
+<body data-th-replace="base :: page_body(~{::main})">
+<main>
+  <ul data-th-each="ticker : ${tickers}">
+    <li>
+      <a data-th-href="'/stock/' + ${ticker.name}">[[ ${ticker.name} ]]</a>
+    </li>
+  </ul>
+</main>
+</body>
+</html>

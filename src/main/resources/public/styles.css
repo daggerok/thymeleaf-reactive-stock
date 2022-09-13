@@ -1,0 +1,22 @@
+/* Roboto font */
+html, body {
+  font-family: Roboto, sans-serif;
+}
+
+/* Reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* List items styles */
+ul {
+  list-style-type: none;
+}
+
+/* Fix underscored text and color of (already clicked) links */
+a, a:visited, a:hover, a:active {
+  color: blue;
+  text-decoration: none;
+}

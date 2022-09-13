@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ReactiveStockApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <option name="ACTIVE_PROFILES" />
+    <module name="view-reactive-thymeleaf" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.daggerok.reactivestock.ReactiveStockApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
